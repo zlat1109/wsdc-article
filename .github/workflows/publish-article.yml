@@ -4,16 +4,19 @@ on:
   workflow_dispatch:
     inputs:
       article_file:
-        description: 'Path to the article Markdown file (source for teaser)'
+        description: 'Select article file to publish teaser from'
         required: true
         default: 'article_draft.md'
+        type: choice
+        options:
+          - article_draft.md
+          # Add other files here in the future
       telegram_chat_id:
-        description: 'Target Telegram Chat ID'
+        description: 'Telegram Chat ID (e.g., @my_channel)'
         required: true
-        default: ''
 
 jobs:
-  publish-teaser:
+  publish:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,18 +26,18 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
-          cache: 'pip'
+          python-version: '3.9'
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Send Telegram Teaser
+      - name: Run Article Publisher Bot
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         run: |
+          echo "🚀 Publishing teaser from ${{ inputs.article_file }}"
           python3 publish_article_bot.py \
             --file "${{ inputs.article_file }}" \
             --chat-id "${{ inputs.telegram_chat_id }}"

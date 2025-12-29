@@ -4,15 +4,22 @@ on:
   workflow_dispatch:
     inputs:
       article_file:
-        description: 'Select article file to publish teaser from'
+        description: 'File with teaser (e.g. article_draft.md)'
         required: true
         default: 'article_draft.md'
-        type: choice
-        options:
-          - article_draft.md
-          # Add other files here in the future
+        type: string
+      article_url:
+        description: 'Full Article URL (e.g. https://.../page.html)'
+        required: true
+        default: 'https://zlat1109.github.io/wsdc-article/events_2025.html'
+        type: string
+      link_text:
+        description: 'Text for the link'
+        required: true
+        default: 'Читать статью'
+        type: string
       telegram_chat_id:
-        description: 'Telegram Chat ID (e.g., @my_channel)'
+        description: 'Telegram Chat ID'
         required: true
 
 jobs:
@@ -40,4 +47,6 @@ jobs:
           echo "🚀 Publishing teaser from ${{ inputs.article_file }}"
           python3 publish_article_bot.py \
             --file "${{ inputs.article_file }}" \
-            --chat-id "${{ inputs.telegram_chat_id }}"
+            --chat-id "${{ inputs.telegram_chat_id }}" \
+            --url "${{ inputs.article_url }}" \
+            --link-text "${{ inputs.link_text }}"

@@ -7,10 +7,9 @@ from pathlib import Path
 from telegram import Bot
 from telegram.constants import ParseMode
 
-def extract_teaser(file_path: Path) -> str:
+def extract_teaser(file_path: Path, article_url: str, link_text: str) -> str:
     """
-    Extracts the Telegram teaser from the markdown file.
-    Assumes the teaser starts after '# Пост для Telegram-канала'
+    Extracts the Telegram teaser from the markdown file and inserts the link.
     """
     with open(file_path, 'r', encoding='utf-8') as f:
         content = f.read()
@@ -22,8 +21,17 @@ def extract_teaser(file_path: Path) -> str:
 
     teaser_content = content.split(teaser_marker)[1].strip()
     
+    # Construct the HTML link
+    html_link = f'<a href="{article_url}">{link_text}</a>'
+    
+    # Replace the placeholder [Ссылка] with the actual HTML link
+    if "[Ссылка]" in teaser_content:
+        teaser_content = teaser_content.replace("[Ссылка]", html_link)
+    else:
+        # If no placeholder, append the link at the end (fallback)
+        teaser_content += f"\n\n🔗 {html_link}"
+    
     # Convert Markdown bold (**text**) to HTML bold (<b>text</b>)
-    # This assumes the link is already in HTML format in the source file
     teaser_content = re.sub(r'\*\*(.*?)\*\*', r'<b>\1</b>', teaser_content)
     
     return teaser_content
@@ -46,6 +54,8 @@ async def main():
     parser = argparse.ArgumentParser(description='Publish article teaser to Telegram')
     parser.add_argument('--file', type=Path, required=True, help='Path to the article Markdown file source')
     parser.add_argument('--chat-id', type=str, required=True, help='Telegram Chat ID')
+    parser.add_argument('--url', type=str, required=True, help='URL of the full article')
+    parser.add_argument('--link-text', type=str, default="Читать статью", help='Text for the link anchor')
     
     args = parser.parse_args()
     
@@ -59,7 +69,7 @@ async def main():
         sys.exit(1)
 
     try:
-        teaser_text = extract_teaser(args.file)
+        teaser_text = extract_teaser(args.file, args.url, args.link_text)
         print("--- Teaser Preview ---")
         print(teaser_text)
         print("----------------------")

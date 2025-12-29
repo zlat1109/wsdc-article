@@ -116,9 +116,9 @@
         }
 
         .rank-table td {
-            padding: 16px 24px;
+            padding: 20px 24px; /* Увеличил паддинг для воздуха */
             border-bottom: 1px solid #edf2f7;
-            vertical-align: top; /* Changed to top for better comment alignment */
+            vertical-align: top; /* Выравнивание по верху */
         }
 
         .rank-table tr:last-child td {
@@ -130,7 +130,8 @@
             color: #cbd5e0;
             width: 40px;
             text-align: center;
-            padding-top: 18px !important; /* Align with text */
+            font-size: 18px; /* Чуть крупнее цифра ранга */
+            line-height: 1.4; /* Подгоняем высоту строки под название */
         }
 
         .rank-col.top-3 {
@@ -138,56 +139,67 @@
         }
 
         .event-cell {
-            padding-top: 16px !important;
+            /* Нет доп паддингов, используем общий */
         }
 
         .event-name {
-            font-weight: 600;
+            font-weight: 700;
             color: #2d3748;
             display: block;
-            margin-bottom: 4px;
+            margin-bottom: 6px;
+            font-size: 17px;
+            line-height: 1.4; /* Совпадает с рангом и метрикой */
         }
 
         .event-comment {
-            font-size: 13px;
-            color: #666;
-            line-height: 1.5;
+            font-size: 14px;
+            color: #718096;
+            line-height: 1.6;
             display: block;
         }
 
         .event-flag {
             margin-right: 8px;
             font-size: 18px;
+            vertical-align: middle;
+            position: relative;
+            top: -1px;
         }
 
         .metric-cell {
-            padding-top: 18px !important;
             white-space: nowrap;
+            text-align: right;
+            line-height: 1.4; /* Совпадает с названием */
         }
 
         .metric-val {
             font-family: 'SF Mono', 'Roboto Mono', monospace;
-            font-weight: 600;
+            font-weight: 700;
+            font-size: 17px;
+            color: #2d3748;
         }
 
         .growth-positive {
             color: #2f855a;
             font-size: 13px;
-            font-weight: 500;
-            margin-left: 6px;
+            font-weight: 600;
+            margin-left: 8px;
+            display: inline-block;
         }
 
         .growth-neutral {
-            color: #718096;
+            color: #a0aec0;
             font-size: 13px;
-            margin-left: 6px;
+            margin-left: 8px;
+            display: inline-block;
         }
         
         .growth-negative {
-            color: #c53030;
-             font-size: 13px;
-            font-weight: 500;
-            margin-left: 6px;
+            color: #e53e3e;
+            font-size: 13px;
+            font-weight: 600;
+            margin-left: 8px;
+            display: inline-block;
         }
 
         /* Footer */
@@ -215,8 +227,10 @@
             .article-title { font-size: 36px; }
             .intro { font-size: 18px; padding-left: 20px; }
             .rank-table { font-size: 14px; }
-            .rank-table th, .rank-table td { padding: 12px 16px; }
-            .event-flag { display: inline-block; margin-bottom: 0; }
+            .rank-table th, .rank-table td { padding: 16px 16px; }
+            .event-name { font-size: 16px; }
+            .rank-col { font-size: 16px; }
+            .metric-val { font-size: 16px; }
         }
     </style>
 </head>
@@ -247,7 +261,7 @@
                     <tr>
                         <th style="width: 50px">#</th>
                         <th>Event</th>
-                        <th>Total Points</th>
+                        <th style="text-align: right">Total Points</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -307,7 +321,7 @@
                     <tr>
                         <th style="width: 50px">#</th>
                         <th>Event</th>
-                        <th>New Dancers</th>
+                        <th style="text-align: right">New Dancers</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -367,7 +381,7 @@
                     <tr>
                         <th style="width: 50px">#</th>
                         <th>Event</th>
-                        <th>Points</th>
+                        <th style="text-align: right">Points</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -468,7 +482,7 @@
                     <tr>
                         <th style="width: 50px">#</th>
                         <th>Event</th>
-                        <th>New Dancers</th>
+                        <th style="text-align: right">New Dancers</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -566,9 +580,9 @@
                     <tr>
                         <th style="width: 50px">#</th>
                         <th>Event</th>
-                        <th>Total Points</th>
-                        <th>Рост</th>
-                        <th>New Dancers</th>
+                        <th style="text-align: right">Total Points</th>
+                        <th style="text-align: right">Рост</th>
+                        <th style="text-align: right">New Dancers</th>
                     </tr>
                 </thead>
                 <tbody>

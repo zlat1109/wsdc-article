@@ -1,19 +1,19 @@
-name: Publish Article to Telegraph
+name: Publish Article Teaser
 
 on:
   workflow_dispatch:
     inputs:
       article_file:
-        description: 'Path to the article Markdown file'
+        description: 'Path to the article Markdown file (source for teaser)'
         required: true
         default: 'article_draft.md'
       telegram_chat_id:
-        description: 'Target Telegram Chat ID (e.g., @channelname or -100...)'
+        description: 'Target Telegram Chat ID'
         required: true
         default: ''
 
 jobs:
-  publish:
+  publish-teaser:
     runs-on: ubuntu-latest
 
     steps:
@@ -26,17 +26,12 @@ jobs:
           python-version: '3.10'
           cache: 'pip'
 
-      - name: Debug Requirements
-        run: cat requirements.txt
-
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          pip install beautifulsoup4  # Explicit install to fix issue
-          pip list
 
-      - name: Publish Article
+      - name: Send Telegram Teaser
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         run: |

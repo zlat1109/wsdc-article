@@ -2,6 +2,7 @@ import os
 import sys
 import argparse
 import asyncio
+import re
 from pathlib import Path
 from telegram import Bot
 from telegram.constants import ParseMode
@@ -24,17 +25,11 @@ def extract_teaser(file_path: Path) -> str:
 
     teaser_content = content.split(teaser_marker)[1].strip()
     
-    # Remove header lines if present (like **Заголовок:**) to clean it up, 
-    # or just keep it as is if the user formatted it specifically.
-    # The user's format:
-    # **Заголовок:**
-    # **Статистика...**
-    # ...
-    # 🔗 [Ссылка]
-    
-    # Replace the placeholder link with the actual URL
-    # teaser_content = teaser_content.replace("[Ссылка]", GITHUB_PAGES_URL)
+    # Replace the placeholder link with the actual URL HTML
     teaser_content = teaser_content.replace("[Ссылка]", f'<a href="{GITHUB_PAGES_URL}">Читать статью</a>')
+    
+    # Convert Markdown bold (**text**) to HTML bold (<b>text</b>)
+    teaser_content = re.sub(r'\*\*(.*?)\*\*', r'<b>\1</b>', teaser_content)
     
     return teaser_content
 
@@ -45,7 +40,8 @@ async def send_telegram_message(chat_id: str, token: str, message: str):
     bot = Bot(token=token)
     print(f"Sending message to {chat_id}...")
     try:
-        await bot.send_message(chat_id=chat_id, text=message, parse_mode=ParseMode.MARKDOWN)
+        # Use ParseMode.HTML to support the link and bold text
+        await bot.send_message(chat_id=chat_id, text=message, parse_mode=ParseMode.HTML, disable_web_page_preview=False)
         print("Successfully sent message to Telegram!")
     except Exception as e:
         print(f"Failed to send message: {e}")

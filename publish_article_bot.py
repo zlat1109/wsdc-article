@@ -7,7 +7,7 @@ from telegram import Bot
 from telegram.constants import ParseMode
 
 # GitHub Pages URL for this repository
-GITHUB_PAGES_URL = "https://zlat1109.github.io/wsdc-article/"
+GITHUB_PAGES_URL = "https://zlat1109.github.io/wsdc-article/events_2025.html"
 
 def extract_teaser(file_path: Path) -> str:
     """
@@ -33,7 +33,8 @@ def extract_teaser(file_path: Path) -> str:
     # 🔗 [Ссылка]
     
     # Replace the placeholder link with the actual URL
-    teaser_content = teaser_content.replace("[Ссылка]", GITHUB_PAGES_URL)
+    # teaser_content = teaser_content.replace("[Ссылка]", GITHUB_PAGES_URL)
+    teaser_content = teaser_content.replace("[Ссылка]", f'<a href="{GITHUB_PAGES_URL}">Читать статью</a>')
     
     return teaser_content
 

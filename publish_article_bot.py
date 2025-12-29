@@ -48,9 +48,19 @@ def split_content(content):
 def markdown_to_html(md_text):
     """
     Converts Markdown to HTML using the markdown library.
+    Telegraph doesn't support h1/h2 in content (Title is h1).
+    We map:
+    # -> h3
+    ## -> h4
+    ### -> h5
     """
-    # basic conversion
     html = markdown.markdown(md_text)
+    
+    # Simple tag replacement for Telegraph compatibility
+    html = html.replace('<h1>', '<h3>').replace('</h1>', '</h3>')
+    html = html.replace('<h2>', '<h4>').replace('</h2>', '</h4>')
+    html = html.replace('<h3>', '<h5>').replace('</h3>', '</h5>')
+    
     return html
 
 def publish_to_telegraph(title, author, html_content):

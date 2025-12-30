@@ -129,6 +129,10 @@
             border-bottom: 2px solid #e2e8f0;
         }
 
+        .rank-table th.center-align {
+            text-align: center;
+        }
+
         .rank-table td {
             padding: 16px 24px;
             border-bottom: 1px solid #edf2f7;
@@ -188,10 +192,12 @@
 
         .growth-cell {
             white-space: nowrap;
-            text-align: left;
+            text-align: center;
             vertical-align: middle;
-            width: 1%;
-            padding-left: 12px !important; /* Отступ от цифры */
+            width: 80px;
+            padding-left: 10px;
+            padding-right: 10px;
+            line-height: 1.4;
         }
 
         .metric-val {
@@ -205,14 +211,12 @@
             color: #2f855a;
             font-size: 13px;
             font-weight: 600;
-            margin-left: 8px;
             display: inline-block;
         }
 
         .growth-neutral {
             color: #a0aec0;
             font-size: 13px;
-            margin-left: 8px;
             display: inline-block;
         }
         
@@ -220,7 +224,6 @@
             color: #e53e3e;
             font-size: 13px;
             font-weight: 600;
-            margin-left: 8px;
             display: inline-block;
         }
 
@@ -294,7 +297,7 @@
                         <th style="width: 50px">#</th>
                         <th>Event</th>
                         <th style="text-align: right">Points</th>
-                        <th></th>
+                        <th class="center-align">Trend</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -305,7 +308,7 @@
                             <span class="event-comment">Лидер года по сумме начисленных пойнтов. На BudaFest 2025 было начислено всего на 2 пойнта больше, чем на BudaFest 2024, что делает еще более интересным заочное соперничество с MADjam в 2026 году.</span>
                         </td>
                         <td class="metric-cell"><span class="metric-val">766</span></td>
-                        <td class="growth-cell"><span class="growth-neutral">(+0.3%)</span></td>
+                        <td class="growth-cell"><span class="growth-neutral">+0.3%</span></td>
                     </tr>
                     <tr>
                         <td class="rank-col top-3">2</td>
@@ -314,7 +317,7 @@
                             <span class="event-comment">Сохранил свои лидирующие позиции.</span>
                         </td>
                         <td class="metric-cell"><span class="metric-val">709</span></td>
-                        <td class="growth-cell"></td>
+                        <td class="growth-cell"><span class="growth-positive">+3.8%</span></td>
                     </tr>
                     <tr>
                         <td class="rank-col top-3">3</td>
@@ -331,7 +334,7 @@
                             <span class="event-name"><span class="event-flag">🇺🇸</span> Liberty Swing Dance Championships</span>
                         </td>
                         <td class="metric-cell"><span class="metric-val">633</span></td>
-                        <td class="growth-cell"></td>
+                        <td class="growth-cell"><span class="growth-positive">+6.6%</span></td>
                     </tr>
                     <tr>
                         <td class="rank-col">5</td>
@@ -339,7 +342,7 @@
                             <span class="event-name"><span class="event-flag">🇺🇸</span> Atlanta Swing Classic</span>
                         </td>
                         <td class="metric-cell"><span class="metric-val">632</span></td>
-                        <td class="growth-cell"></td>
+                        <td class="growth-cell"><span class="growth-positive">+3.3%</span></td>
                     </tr>
                 </tbody>
             </table>
@@ -362,7 +365,7 @@
                         <th style="width: 50px">#</th>
                         <th>Event</th>
                         <th style="text-align: right">New Dancers</th>
-                        <th></th>
+                        <th class="center-align">Trend</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -373,7 +376,7 @@
                             <span class="event-comment">Ивент остается главной точкой входа для новых танцоров в Азии, даже несмотря на то, что в 2024 году 36 танцоров получили тут свой номер WSDC.</span>
                         </td>
                         <td class="metric-cell"><span class="metric-val">32</span></td>
-                        <td class="growth-cell"></td>
+                        <td class="growth-cell"><span class="growth-negative">-8.6%</span></td>
                     </tr>
                     <tr>
                         <td class="rank-col top-3">2</td>
@@ -382,7 +385,7 @@
                             <span class="event-comment">Франция сохраняет сильные позиции в динамике роста комьюнити.</span>
                         </td>
                         <td class="metric-cell"><span class="metric-val">27</span></td>
-                        <td class="growth-cell"></td>
+                        <td class="growth-cell"><span class="growth-positive">+17.4%</span></td>
                     </tr>
                     <tr>
                         <td class="rank-col top-3">3</td>
@@ -400,7 +403,7 @@
                             <span class="event-comment">Польский ивент, показывающий активность роста польского комьюнити.</span>
                         </td>
                         <td class="metric-cell"><span class="metric-val">27</span></td>
-                        <td class="growth-cell"></td>
+                        <td class="growth-cell"><span class="growth-positive">+12.5%</span></td>
                     </tr>
                     <tr>
                         <td class="rank-col">5</td>
@@ -409,7 +412,7 @@
                             <span class="event-comment">Еще один азиатский ивент в топе.</span>
                         </td>
                         <td class="metric-cell"><span class="metric-val">27</span></td>
-                        <td class="growth-cell"></td>
+                        <td class="growth-cell"><span class="growth-positive">New</span></td>
                     </tr>
                 </tbody>
             </table>
@@ -430,7 +433,7 @@
                         <th style="width: 50px">#</th>
                         <th>Event</th>
                         <th style="text-align: right">Points</th>
-                        <th></th>
+                        <th class="center-align">Trend</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -522,7 +525,7 @@
                             <span class="event-comment">Мощное возвращение в элиту после перерыва (+100.0%).</span>
                         </td>
                         <td class="metric-cell"><span class="metric-val">503</span></td>
-                        <td class="growth-cell"><span class="growth-positive">+100%</span></td>
+                        <td class="growth-cell"><span class="growth-neutral">—</span></td>
                     </tr>
                 </tbody>
             </table>
@@ -544,6 +547,7 @@
                         <th style="width: 50px">#</th>
                         <th>Event</th>
                         <th style="text-align: right">New Dancers</th>
+                        <th class="center-align">Trend</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -554,6 +558,7 @@
                             <span class="event-comment">Главная точка входа для французских танцоров (+17.4%).</span>
                         </td>
                         <td class="metric-cell"><span class="metric-val">27</span></td>
+                        <td class="growth-cell"><span class="growth-positive">+17.4%</span></td>
                     </tr>
                     <tr>
                         <td class="rank-col top-3">2</td>
@@ -562,6 +567,7 @@
                             <span class="event-comment">Взрывной рост главного российского ивента (+125.0%).</span>
                         </td>
                         <td class="metric-cell"><span class="metric-val">27</span></td>
+                        <td class="growth-cell"><span class="growth-positive">+125%</span></td>
                     </tr>
                     <tr>
                         <td class="rank-col top-3">3</td>
@@ -570,6 +576,7 @@
                             <span class="event-comment">Еще один российский ивент с рекордным приростом новичков (+177.8%).</span>
                         </td>
                         <td class="metric-cell"><span class="metric-val">25</span></td>
+                        <td class="growth-cell"><span class="growth-positive">+177.8%</span></td>
                     </tr>
                     <tr>
                         <td class="rank-col">4</td>
@@ -578,6 +585,7 @@
                             <span class="event-comment">Крупнейший ивент Европы продолжает привлекать новых танцоров (+20.0%).</span>
                         </td>
                         <td class="metric-cell"><span class="metric-val">24</span></td>
+                        <td class="growth-cell"><span class="growth-positive">+20.0%</span></td>
                     </tr>
                     <tr>
                         <td class="rank-col">5</td>
@@ -586,6 +594,7 @@
                             <span class="event-comment">Новый испанский ивент с большим количеством французов сразу показал отличный результат.</span>
                         </td>
                         <td class="metric-cell"><span class="metric-val">24</span></td>
+                        <td class="growth-cell"><span class="growth-positive">New</span></td>
                     </tr>
                     <tr>
                         <td class="rank-col">6</td>
@@ -594,6 +603,7 @@
                             <span class="event-comment">Стабильно высокий приток новичков в Германии, даже несмотря на небольшое снижение метрики (-4.0%).</span>
                         </td>
                         <td class="metric-cell"><span class="metric-val">24</span></td>
+                        <td class="growth-cell"><span class="growth-negative">-4.0%</span></td>
                     </tr>
                     <tr>
                         <td class="rank-col">7</td>
@@ -602,6 +612,7 @@
                             <span class="event-comment">Бельгийский ивент со стабильно высоким количеством новичков.</span>
                         </td>
                         <td class="metric-cell"><span class="metric-val">23</span></td>
+                        <td class="growth-cell"><span class="growth-neutral">0%</span></td>
                     </tr>
                     <tr>
                         <td class="rank-col">8</td>
@@ -610,6 +621,7 @@
                             <span class="event-comment">Шведский летний фестиваль вырос почти на треть (+29.4%).</span>
                         </td>
                         <td class="metric-cell"><span class="metric-val">22</span></td>
+                        <td class="growth-cell"><span class="growth-positive">+29.4%</span></td>
                     </tr>
                     <tr>
                         <td class="rank-col">9</td>
@@ -618,6 +630,7 @@
                             <span class="event-comment">Польский представитель в этом топе.</span>
                         </td>
                         <td class="metric-cell"><span class="metric-val">22</span></td>
+                        <td class="growth-cell"><span class="growth-positive">New</span></td>
                     </tr>
                     <tr>
                         <td class="rank-col">10</td>
@@ -626,6 +639,7 @@
                             <span class="event-comment">Австрия закрывает десятку.</span>
                         </td>
                         <td class="metric-cell"><span class="metric-val">21</span></td>
+                        <td class="growth-cell"><span class="growth-neutral">0%</span></td>
                     </tr>
                 </tbody>
             </table>
@@ -644,7 +658,7 @@
                         <th style="width: 50px">#</th>
                         <th>Event</th>
                         <th style="text-align: right">Total Points</th>
-                        <th style="text-align: right">Рост</th>
+                        <th class="center-align">Trend</th>
                         <th style="text-align: right">New Dancers</th>
                     </tr>
                 </thead>
@@ -653,49 +667,49 @@
                         <td class="rank-col top-3">1</td>
                         <td class="event-cell"><span class="event-name">St.Petersburg WCS Nights</span></td>
                         <td class="metric-cell"><span class="metric-val">428</span></td>
-                        <td class="metric-cell"><span class="growth-positive">+25.1%</span></td>
+                        <td class="growth-cell"><span class="growth-positive">+25.1%</span></td>
                         <td class="metric-cell">27</td>
                     </tr>
                     <tr>
                         <td class="rank-col top-3">2</td>
                         <td class="event-cell"><span class="event-name">Swing & Snow</span></td>
                         <td class="metric-cell"><span class="metric-val">361</span></td>
-                        <td class="metric-cell"><span class="growth-positive">+24.1%</span></td>
+                        <td class="growth-cell"><span class="growth-positive">+24.1%</span></td>
                         <td class="metric-cell">25</td>
                     </tr>
                     <tr>
                         <td class="rank-col top-3">3</td>
                         <td class="event-cell"><span class="event-name">Moscow Westie Fest Gala Edition</span></td>
                         <td class="metric-cell"><span class="metric-val">304</span></td>
-                        <td class="metric-cell"><span class="growth-neutral">—</span></td>
+                        <td class="growth-cell"><span class="growth-neutral">—</span></td>
                         <td class="metric-cell">10</td>
                     </tr>
                     <tr>
                         <td class="rank-col">4</td>
                         <td class="event-cell"><span class="event-name">Shooba Dooba Swing</span></td>
                         <td class="metric-cell"><span class="metric-val">293</span></td>
-                        <td class="metric-cell"><span class="growth-positive">+3.5%</span></td>
+                        <td class="growth-cell"><span class="growth-positive">+3.5%</span></td>
                         <td class="metric-cell">8</td>
                     </tr>
                     <tr>
                         <td class="rank-col">5</td>
                         <td class="event-cell"><span class="event-name">HONEY FEST</span></td>
                         <td class="metric-cell"><span class="metric-val">242</span></td>
-                        <td class="metric-cell"><span class="growth-positive">+1.7%</span></td>
+                        <td class="growth-cell"><span class="growth-positive">+1.7%</span></td>
                         <td class="metric-cell">9</td>
                     </tr>
                     <tr>
                         <td class="rank-col">6</td>
                         <td class="event-cell"><span class="event-name">Americano Dance Camp</span></td>
                         <td class="metric-cell"><span class="metric-val">242</span></td>
-                        <td class="metric-cell"><span class="growth-negative">-0.8%</span></td>
+                        <td class="growth-cell"><span class="growth-negative">-0.8%</span></td>
                         <td class="metric-cell">8</td>
                     </tr>
                     <tr>
                         <td class="rank-col">7</td>
                         <td class="event-cell"><span class="event-name">Sea Dance Fest</span></td>
                         <td class="metric-cell"><span class="metric-val">167</span></td>
-                        <td class="metric-cell"><span class="growth-positive">+32.5%</span></td>
+                        <td class="growth-cell"><span class="growth-positive">+32.5%</span></td>
                         <td class="metric-cell">8</td>
                     </tr>
                 </tbody>

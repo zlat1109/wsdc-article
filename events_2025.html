@@ -4,7 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Итоги WSDC 2025: Ивенты</title>
+    <!-- Подключаем Twemoji для гарантированного отображения флагов на Windows -->
+    <script src="https://unpkg.com/twemoji@14.0.2/dist/twemoji.min.js" crossorigin="anonymous"></script>
     <style>
+        /* Стили для Twemoji */
+        img.emoji {
+            height: 1em;
+            width: 1em;
+            margin: 0 .05em 0 .1em;
+            vertical-align: -0.1em;
+        }
         * {
             margin: 0;
             padding: 0;
@@ -187,7 +196,6 @@
         }
 
         .event-flag {
-            font-family: 'Noto Color Emoji', sans-serif;
             margin-right: 6px;
             font-size: 16px; /* Чуть меньше флаг */
             vertical-align: middle;
@@ -854,5 +862,9 @@
     </footer>
 </div>
 
+<script>
+    // Запускаем Twemoji для замены системных эмодзи на SVG
+    twemoji.parse(document.body);
+</script>
 </body>
 </html>

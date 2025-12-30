@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WSDC 2025 Results: Events</title>
-    <!-- Connect Noto Color Emoji font for Windows flag support -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap" rel="stylesheet">
+    <!-- Connect Twemoji for guaranteed flag rendering on Windows -->
+    <script src="https://unpkg.com/twemoji@14.0.2/dist/twemoji.min.js" crossorigin="anonymous"></script>
     <style>
+        /* Styles for Twemoji */
+        img.emoji {
+            height: 1em;
+            width: 1em;
+            margin: 0 .05em 0 .1em;
+            vertical-align: -0.1em;
+        }
         * {
             margin: 0;
             padding: 0;
@@ -189,7 +196,6 @@
         }
 
         .event-flag {
-            font-family: 'Noto Color Emoji', sans-serif;
             margin-right: 6px;
             font-size: 16px; /* Чуть меньше флаг */
             vertical-align: middle;
@@ -1010,5 +1016,9 @@
     </footer>
 </div>
 
+<script>
+    // Initialize Twemoji to replace system emojis with SVGs
+    twemoji.parse(document.body);
+</script>
 </body>
 </html>

@@ -219,6 +219,22 @@
             display: inline-block;
         }
 
+        .table-note {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #718096;
+            font-style: italic;
+            background: #f7fafc;
+            padding: 12px 16px;
+            border-radius: 4px;
+            border-left: 3px solid #cbd5e0;
+        }
+
+        .rank-table tbody tr:hover {
+            background-color: #f7fafc;
+            transition: background-color 0.2s ease;
+        }
+
         /* Footer */
         .article-footer {
             background-color: #fafafa;
@@ -277,7 +293,7 @@
 
     <article class="article-content">
         <div class="intro">
-            Статистика 2025 года демонстрирует интересную динамику в табеле о рангах WSDC ивентов. Ключевым фактором года стало отсутствие в календаре MADjam — самого масштабного ивента последних лет, что привело к значительному перераспределению лидерских позиций.
+            Статистика 2025 года зафиксировала значительные изменения в иерархии WSDC ивентов. Ключевым фактором стал пропуск MADjam — самого масштабного ивента последних лет, что привело к перераспределению лидерских позиций в глобальном рейтинге.
         </div>
 
         <!-- Section 1: Global Total Points -->
@@ -393,7 +409,7 @@
                 </tbody>
             </table>
 </div>
-            <p style="margin-top: 15px; font-size: 14px; color: #718096;"><em>Примечание: Из топ-10 выбыли <strong>MADjam</strong> (пауза в 2025), <strong>DC Swing eXperience</strong> (586 pts, 12-е место) и <strong>French Open WCS</strong> (493 pts, ~30-е место).</em></p>
+            <div class="table-note"><em>Примечание: Из топ-10 выбыли <strong>MADjam</strong> (пауза в 2025), <strong>DC Swing eXperience</strong> (586 pts, 12-е место) и <strong>French Open WCS</strong> (493 pts, ~30-е место).</em></div>
         </section>
 
         <!-- Section 2: Global New Dancers -->
@@ -420,7 +436,7 @@
                         <td class="rank-col top-3">🥇</td>
                         <td class="event-cell">
                             <span class="event-name"><span class="event-flag">🇸🇬</span> Asia WCS Open</span>
-                            <span class="event-comment">Ивент остается главной точкой входа для новых танцоров в Азии, даже несмотря на то, что в 2024 году 36 танцоров получили тут свой номер WSDC.</span>
+                            <span class="event-comment">Ивент остается главной точкой входа для новых танцоров в Азии, хотя в 2024 году здесь было зарегистрировано больше новичков (36 против 32).</span>
                         </td>
                         <td class="metric-cell"><span class="metric-val">32</span></td>
                         <td class="growth-cell"><span class="growth-negative">-8.6%</span></td>
@@ -456,7 +472,7 @@
                         <td class="rank-col">5</td>
                         <td class="event-cell">
                             <span class="event-name"><span class="event-flag">🇲🇾</span> MY Swing</span>
-                            <span class="event-comment">Еще один азиатский ивент в топе.</span>
+                            <span class="event-comment">Малайзийский ивент дебютировал в глобальном топе, подтверждая рост WCS в азиатском регионе.</span>
                         </td>
                         <td class="metric-cell"><span class="metric-val">27</span></td>
                         <td class="growth-cell"><span class="growth-positive">New</span></td>
@@ -509,7 +525,7 @@
                 </tbody>
             </table>
 </div>
-            <p style="margin-top: 15px; font-size: 14px; color: #718096;"><em>Примечание: Ротация в этом топе колоссальная. По сравнению с 2024 годом из десятки вышли <strong>Austin Rocks</strong>, <strong>Swing City Chicago</strong>, <strong>Halloween SwingThing</strong> и <strong>German Open</strong>.</em></p>
+            <div class="table-note"><em>Примечание: Ротация в этом топе колоссальная. По сравнению с 2024 годом из десятки вышли <strong>Austin Rocks</strong>, <strong>Swing City Chicago</strong>, <strong>Halloween SwingThing</strong> и <strong>German Open</strong>.</em></div>
         </section>
 
         <hr style="border: 0; border-top: 1px solid #e5e5e5; margin: 60px 0;">
@@ -517,7 +533,7 @@
         <!-- Section 3: European Top -->
         <section class="section">
             <h2 class="section-title">Европейский топ (Points)</h2>
-            <p>В Европе стабильное доминирование лидера и высокая конкуренция: плотность результатов в топ-10 очень высока. Разрыв между 5-м и 10-м местом составляет всего 30 поинтов — борьба за попадание в топ идет буквально за каждый поинт.</p>
+            <p>В Европе сохраняется доминирование лидера, но конкуренция в топ-10 интенсивна: разрыв между 5-м и 10-м местом составляет всего 30 поинтов, что демонстрирует плотность результатов.</p>
 
             <div class="table-scroll">
 <table class="rank-table">
@@ -623,9 +639,7 @@
                 </tbody>
             </table>
 </div>
-            <div class="data-note" style="background: #f7fafc; padding: 16px; border-radius: 4px; border-left: 3px solid #cbd5e0;">
-                Из топ-10 по сравнению с прошлым годом выбыли: <strong>French Open WCS</strong> (493 pts, ранее 2-е место), <strong>Baltic Swing</strong> и <strong>D-Townswing</strong>.
-            </div>
+            <div class="table-note"><em>Примечание: Из топ-10 по сравнению с прошлым годом выбыли <strong>French Open WCS</strong> (493 pts, ранее 2-е место), <strong>Baltic Swing</strong> и <strong>D-Townswing</strong>.</em></div>
         </section>
 
         <!-- Section 4: European New Dancers -->

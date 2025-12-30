@@ -28,10 +28,28 @@
 
         /* Header */
         .article-header {
-            background: #2d3748;
+            background: #2d3748 url('events_background.png') center center / cover no-repeat;
             color: white;
             padding: 100px 80px 80px;
             border-bottom: 1px solid #e5e5e5;
+            position: relative;
+        }
+        
+        .article-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #2d3748;
+            opacity: 0.85;
+            z-index: 0;
+        }
+        
+        .article-header > * {
+            position: relative;
+            z-index: 1;
         }
 
         .article-title {

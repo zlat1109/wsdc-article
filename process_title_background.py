@@ -22,7 +22,8 @@ def create_organic_title_background():
         print(f"Error: {INPUT_FILE} not found.")
         return
 
-    # 2. Stretch to exact target dimensions (no aspect ratio preservation)
+    # 2. Stretch directly to target size (ignore aspect ratio, fill completely)
+    # This ensures no internal padding/borders are added
     img_cropped = img.resize((TARGET_WIDTH, TARGET_HEIGHT), Image.Resampling.LANCZOS)
 
     # 3. Slightly reduce brightness (preserves structure, logos remain visible)

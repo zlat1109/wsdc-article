@@ -119,36 +119,15 @@
             border-bottom: 1px solid #edf2f7;
             vertical-align: middle;
         }
-        
-        /* Rank Column Styles */
         .rank-col {
             font-weight: 700;
             color: #cbd5e0;
-            width: 45px; /* Немного шире для метки */
+            width: 65px;
             text-align: center;
             font-size: 15px;
-            vertical-align: middle;
-        }
-        .rank-col-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            line-height: 1.1;
-        }
-        .rank-val {
-            display: block;
-        }
-        .rank-diff {
-            display: block;
-            font-size: 10px;
-            margin-top: 2px;
-            font-weight: 600;
             white-space: nowrap;
         }
-
-        .rank-col.top-3 .rank-val { color: #2d3748; font-size: 18px; }
-        
+        .rank-col.top-3 { color: #2d3748; font-size: 18px; }
         .event-name {
             font-weight: 700;
             color: #2d3748;
@@ -162,12 +141,10 @@
             line-height: 1.4;
             display: block;
         }
-        
-        /* Diff indicators colors */
-        .diff-pos { color: #38a169; }
-        .diff-neg { color: #e53e3e; }
-        .diff-new { color: #3182ce; }
-        /* .diff-neutral removed/not used */
+        .diff-pos { color: #38a169; font-size: 11px; font-weight: 600; margin-left: 2px; vertical-align: middle; }
+        .diff-neg { color: #e53e3e; font-size: 11px; font-weight: 600; margin-left: 2px; vertical-align: middle; }
+        .diff-neutral { color: #a0aec0; font-size: 11px; margin-left: 2px; display: none; }
+        .diff-new { color: #3182ce; font-size: 10px; font-weight: 700; margin-left: 2px; text-transform: uppercase; vertical-align: middle; }
 
         .event-flag {
             margin-right: 6px;
@@ -237,7 +214,7 @@
                 <table class="rank-table">
                     <thead>
                         <tr>
-                            <th style="width: 45px">#</th>
+                            <th style="width: 30px">#</th>
                             <th>Страна</th>
                             <th style="text-align: right">Events</th>
                             <th style="text-align: right">Points</th>
@@ -246,70 +223,70 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="rank-col top-3"><div class="rank-col-content"><span class="rank-val">1</span></div></td>
+                            <td class="rank-col top-3">1</td>
                             <td class="event-cell"><span class="event-flag">🇺🇸</span> United States</td>
                             <td class="metric-cell" style="text-align: right">75</td>
                             <td class="metric-cell">26,352</td>
                             <td class="metric-cell">946</td>
                         </tr>
                         <tr>
-                            <td class="rank-col top-3"><div class="rank-col-content"><span class="rank-val">2</span></div></td>
+                            <td class="rank-col top-3">2</td>
                             <td class="event-cell"><span class="event-flag">🇫🇷</span> France</td>
                             <td class="metric-cell" style="text-align: right">11</td>
                             <td class="metric-cell">4,280</td>
                             <td class="metric-cell">173</td>
                         </tr>
                         <tr>
-                            <td class="rank-col top-3"><div class="rank-col-content"><span class="rank-val">3</span></div></td>
+                            <td class="rank-col top-3">3</td>
                             <td class="event-cell"><span class="event-flag">🇩🇪</span> Germany</td>
                             <td class="metric-cell" style="text-align: right">10</td>
                             <td class="metric-cell">3,843</td>
                             <td class="metric-cell">197</td>
                         </tr>
                         <tr>
-                            <td class="rank-col"><div class="rank-col-content"><span class="rank-val">4</span></div></td>
+                            <td class="rank-col">4</td>
                             <td class="event-cell"><span class="event-flag">🇸🇪</span> Sweden</td>
                             <td class="metric-cell" style="text-align: right">7</td>
                             <td class="metric-cell">2,603</td>
                             <td class="metric-cell">127</td>
                         </tr>
                         <tr>
-                            <td class="rank-col"><div class="rank-col-content"><span class="rank-val">5</span><span class="rank-diff diff-pos">▲ +2</span></div></td>
+                            <td class="rank-col">5 <span class="diff-pos">▲ +2</span></td>
                             <td class="event-cell"><span class="event-flag">🇵🇱</span> Poland</td>
                             <td class="metric-cell" style="text-align: right">5</td>
                             <td class="metric-cell">2,393</td>
                             <td class="metric-cell">128</td>
                         </tr>
                         <tr>
-                            <td class="rank-col"><div class="rank-col-content"><span class="rank-val">6</span></div></td>
+                            <td class="rank-col">6</td>
                             <td class="event-cell"><span class="event-flag">🇬🇧</span> United Kingdom</td>
                             <td class="metric-cell" style="text-align: right">7</td>
                             <td class="metric-cell">2,012</td>
                             <td class="metric-cell">118</td>
                         </tr>
                         <tr>
-                            <td class="rank-col"><div class="rank-col-content"><span class="rank-val">7</span><span class="rank-diff diff-neg">▼ -2</span></div></td>
+                            <td class="rank-col">7 <span class="diff-neg">▼ -2</span></td>
                             <td class="event-cell"><span class="event-flag">🇷🇺</span> Russia</td>
                             <td class="metric-cell" style="text-align: right">7</td>
                             <td class="metric-cell">2,037</td>
                             <td class="metric-cell">96</td>
                         </tr>
                         <tr>
-                            <td class="rank-col"><div class="rank-col-content"><span class="rank-val">8</span></div></td>
+                            <td class="rank-col">8</td>
                             <td class="event-cell"><span class="event-flag">🇭🇺</span> Hungary</td>
                             <td class="metric-cell" style="text-align: right">4</td>
                             <td class="metric-cell">1,934</td>
                             <td class="metric-cell">82</td>
                         </tr>
                         <tr>
-                            <td class="rank-col"><div class="rank-col-content"><span class="rank-val">9</span></div></td>
+                            <td class="rank-col">9</td>
                             <td class="event-cell"><span class="event-flag">🇨🇦</span> Canada</td>
                             <td class="metric-cell" style="text-align: right">6</td>
                             <td class="metric-cell">1,359</td>
                             <td class="metric-cell">84</td>
                         </tr>
                         <tr>
-                            <td class="rank-col"><div class="rank-col-content"><span class="rank-val">10</span></div></td>
+                            <td class="rank-col">10</td>
                             <td class="event-cell"><span class="event-flag">🇫🇮</span> Finland</td>
                             <td class="metric-cell" style="text-align: right">3</td>
                             <td class="metric-cell">1,037</td>
@@ -335,7 +312,7 @@
                 <table class="rank-table">
                     <thead>
                         <tr>
-                            <th style="width: 45px">#</th>
+                            <th style="width: 30px">#</th>
                             <th>Штат</th>
                             <th style="text-align: right">Events</th>
                             <th style="text-align: right">Points</th>
@@ -344,35 +321,35 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="rank-col top-3"><div class="rank-col-content"><span class="rank-val">1</span></div></td>
+                            <td class="rank-col top-3">1</td>
                             <td class="event-cell">California (CA) <span class="event-comment">Лидер по поинтам</span></td>
                             <td class="metric-cell" style="text-align: right">11</td>
                             <td class="metric-cell">4,906</td>
                             <td class="metric-cell">115</td>
                         </tr>
                         <tr>
-                            <td class="rank-col top-3"><div class="rank-col-content"><span class="rank-val">2</span></div></td>
+                            <td class="rank-col top-3">2</td>
                             <td class="event-cell">Texas (TX) <span class="event-comment">Лидер по New Dancers</span></td>
                             <td class="metric-cell" style="text-align: right">8</td>
                             <td class="metric-cell">3,063</td>
                             <td class="metric-cell">144</td>
                         </tr>
                         <tr>
-                            <td class="rank-col top-3"><div class="rank-col-content"><span class="rank-val">3</span></div></td>
+                            <td class="rank-col top-3">3</td>
                             <td class="event-cell">Florida (FL) <span class="event-comment">Стабильное 3-е место</span></td>
                             <td class="metric-cell" style="text-align: right">7</td>
                             <td class="metric-cell">1,884</td>
                             <td class="metric-cell">91</td>
                         </tr>
                         <tr>
-                            <td class="rank-col"><div class="rank-col-content"><span class="rank-val">4</span></div></td>
+                            <td class="rank-col">4</td>
                             <td class="event-cell">Oregon (OR)</td>
                             <td class="metric-cell" style="text-align: right">4</td>
                             <td class="metric-cell">1,588</td>
                             <td class="metric-cell">80</td>
                         </tr>
                         <tr>
-                            <td class="rank-col"><div class="rank-col-content"><span class="rank-val">5</span></div></td>
+                            <td class="rank-col">5</td>
                             <td class="event-cell">Massachusetts (MA)</td>
                             <td class="metric-cell" style="text-align: right">4</td>
                             <td class="metric-cell">1,505</td>
@@ -450,7 +427,7 @@
                 <table class="rank-table">
                     <thead>
                         <tr>
-                            <th style="width: 45px">#</th>
+                            <th style="width: 30px">#</th>
                             <th>Город</th>
                             <th style="text-align: right">Events</th>
                             <th style="text-align: right">Points</th>
@@ -459,7 +436,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="rank-col top-3"><div class="rank-col-content"><span class="rank-val">1</span><span class="rank-diff diff-pos">▲ +1</span></div></td>
+                            <td class="rank-col top-3">🥇 <span class="diff-pos">▲ +1</span></td>
                             <td class="event-cell">
                                 <span class="event-name"><span class="event-flag">🇸🇪</span> Stockholm</span>
                                 <span class="event-comment">Новый абсолютный лидер года.</span>
@@ -469,7 +446,7 @@
                             <td class="metric-cell">86</td>
                         </tr>
                         <tr>
-                            <td class="rank-col top-3"><div class="rank-col-content"><span class="rank-val">2</span><span class="rank-diff diff-neg">▼ -1</span></div></td>
+                            <td class="rank-col top-3">🥈 <span class="diff-neg">▼ -1</span></td>
                             <td class="event-cell">
                                 <span class="event-name"><span class="event-flag">🇭🇺</span> Budapest</span>
                                 <span class="event-comment">Главный европейский мега-хаб.</span>
@@ -479,7 +456,7 @@
                             <td class="metric-cell">82</td>
                         </tr>
                         <tr>
-                            <td class="rank-col top-3"><div class="rank-col-content"><span class="rank-val">3</span></div></td>
+                            <td class="rank-col top-3">🥉</td>
                             <td class="event-cell">
                                 <span class="event-name"><span class="event-flag">🇺🇸</span> San Francisco</span>
                                 <span class="event-comment">Столица американского свинга.</span>
@@ -489,49 +466,49 @@
                             <td class="metric-cell">50</td>
                         </tr>
                         <tr>
-                            <td class="rank-col"><div class="rank-col-content"><span class="rank-val">4</span><span class="rank-diff diff-pos">▲</span></div></td>
+                            <td class="rank-col">4 <span class="diff-pos">▲</span></td>
                             <td class="event-cell"><span class="event-flag">🇺🇸</span> Orlando</td>
                             <td class="metric-cell" style="text-align: right">4</td>
                             <td class="metric-cell">1,136</td>
                             <td class="metric-cell">56</td>
                         </tr>
                         <tr>
-                            <td class="rank-col"><div class="rank-col-content"><span class="rank-val">5</span></div></td>
+                            <td class="rank-col">5</td>
                             <td class="event-cell"><span class="event-flag">🇺🇸</span> Atlanta</td>
                             <td class="metric-cell" style="text-align: right">2</td>
                             <td class="metric-cell">1,101</td>
                             <td class="metric-cell">52</td>
                         </tr>
                         <tr>
-                            <td class="rank-col"><div class="rank-col-content"><span class="rank-val">6</span></div></td>
+                            <td class="rank-col">6</td>
                             <td class="event-cell"><span class="event-flag">🇩🇪</span> Freiburg</td>
                             <td class="metric-cell" style="text-align: right">2</td>
                             <td class="metric-cell">1,088</td>
                             <td class="metric-cell">45</td>
                         </tr>
                         <tr>
-                            <td class="rank-col"><div class="rank-col-content"><span class="rank-val">7</span></div></td>
+                            <td class="rank-col">7</td>
                             <td class="event-cell"><span class="event-flag">🇺🇸</span> Phoenix</td>
                             <td class="metric-cell" style="text-align: right">3</td>
                             <td class="metric-cell">1,082</td>
                             <td class="metric-cell">34</td>
                         </tr>
                         <tr>
-                            <td class="rank-col"><div class="rank-col-content"><span class="rank-val">8</span><span class="rank-diff diff-pos">▲</span></div></td>
+                            <td class="rank-col">8 <span class="diff-pos">▲</span></td>
                             <td class="event-cell"><span class="event-flag">🇵🇱</span> Kraków</td>
                             <td class="metric-cell" style="text-align: right">2</td>
                             <td class="metric-cell">1,025</td>
                             <td class="metric-cell">59</td>
                         </tr>
                         <tr>
-                            <td class="rank-col"><div class="rank-col-content"><span class="rank-val">9</span></div></td>
+                            <td class="rank-col">9</td>
                             <td class="event-cell"><span class="event-flag">🇺🇸</span> Seattle</td>
                             <td class="metric-cell" style="text-align: right">2</td>
                             <td class="metric-cell">965</td>
                             <td class="metric-cell">47</td>
                         </tr>
                         <tr>
-                            <td class="rank-col"><div class="rank-col-content"><span class="rank-val">10</span></div></td>
+                            <td class="rank-col">10</td>
                             <td class="event-cell"><span class="event-flag">🇺🇸</span> Austin</td>
                             <td class="metric-cell" style="text-align: right">3</td>
                             <td class="metric-cell">960</td>

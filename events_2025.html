@@ -168,8 +168,9 @@
         .rank-col {
             font-weight: 700;
             color: #cbd5e0;
-            width: 65px; /* Увеличенная ширина для метки */
-            text-align: center;
+            width: 75px; /* Увеличенная ширина для метки */
+            text-align: left; /* Выравнивание по левому краю */
+            padding-left: 12px;
             font-size: 15px;
             line-height: 1.2;
             white-space: nowrap;
@@ -248,9 +249,9 @@
         }
         
         /* Diff indicators */
-        .diff-pos { color: #38a169; font-size: 11px; font-weight: 600; margin-left: 2px; vertical-align: middle; }
-        .diff-neg { color: #e53e3e; font-size: 11px; font-weight: 600; margin-left: 2px; vertical-align: middle; }
-        .diff-new { color: #3182ce; font-size: 10px; font-weight: 700; margin-left: 2px; text-transform: uppercase; vertical-align: middle; }
+        .diff-pos { color: #38a169; font-size: 11px; font-weight: 600; margin-left: 4px; vertical-align: middle; }
+        .diff-neg { color: #e53e3e; font-size: 11px; font-weight: 600; margin-left: 4px; vertical-align: middle; }
+        .diff-new { color: #3182ce; font-size: 10px; font-weight: 700; margin-left: 4px; text-transform: uppercase; vertical-align: middle; }
 
         .table-note {
             margin-top: 15px;
@@ -308,7 +309,7 @@
             .rank-table th, .rank-table td { padding: 8px 10px; }
             
             .event-name { font-size: 14px; margin-bottom: 3px; }
-            .rank-col { font-size: 14px; width: 45px; } /* Чуть меньше на мобильном */
+            .rank-col { font-size: 14px; width: 50px; padding-left: 8px; } /* Чуть меньше на мобильном */
             .metric-val { font-size: 14px; }
             .event-flag { font-size: 14px; }
             
@@ -466,7 +467,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="rank-col top-3">🥇</td>
+                        <td class="rank-col top-3">🥇 <span class="diff-pos">▲ +10</span></td>
                         <td class="event-cell">
                             <span class="event-name"><span class="event-flag">🇸🇬</span> Asia WCS Open</span>
                             <span class="event-comment">Ивент остается главной точкой входа для новых танцоров в Азии, хотя в 2024 году здесь было зарегистрировано больше новичков (36 против 32).</span>
@@ -475,7 +476,7 @@
                         <td class="growth-cell"><span class="growth-negative">-8.6%</span></td>
                     </tr>
                     <tr>
-                        <td class="rank-col top-3">🥈 <span class="diff-pos">▲</span></td>
+                        <td class="rank-col top-3">🥈 <span class="diff-pos">▲ +37</span></td>
                         <td class="event-cell">
                             <span class="event-name"><span class="event-flag">🇫🇷</span> West In Lyon</span>
                             <span class="event-comment">Франция сохраняет сильные позиции в динамике роста комьюнити.</span>
@@ -484,7 +485,7 @@
                         <td class="growth-cell"><span class="growth-positive">+17.4%</span></td>
                     </tr>
                     <tr>
-                        <td class="rank-col top-3">🥉 <span class="diff-pos">▲</span></td>
+                        <td class="rank-col top-3">🥉 <span class="diff-pos">▲ +73</span></td>
                         <td class="event-cell">
                             <span class="event-name"><span class="event-flag">🇷🇺</span> St.Petersburg WCS Nights</span>
                             <span class="event-comment">Ивент показал кратный рост по числу танцоров, получивших свои первые поинты по сравнению с 2024 годом.</span>
@@ -493,7 +494,7 @@
                         <td class="growth-cell"><span class="growth-positive">+125%</span></td>
                     </tr>
                     <tr>
-                        <td class="rank-col">4 <span class="diff-pos">▲</span></td>
+                        <td class="rank-col">4 <span class="diff-pos">▲ +37</span></td>
                         <td class="event-cell">
                             <span class="event-name"><span class="event-flag">🇵🇱</span> King Swing</span>
                             <span class="event-comment">Польский ивент, показывающий активность роста польского комьюнити.</span>
@@ -511,7 +512,7 @@
                         <td class="growth-cell"><span class="growth-positive">New</span></td>
                     </tr>
                     <tr>
-                        <td class="rank-col">6 <span class="diff-neg">▼</span></td>
+                        <td class="rank-col">6 <span class="diff-pos">▲ +2</span></td>
                         <td class="event-cell">
                             <span class="event-name"><span class="event-flag">🇺🇸</span> Midnight Madness WCS</span>
                             <span class="event-comment">Сохранил позиции в топе, несмотря на заметный спад числа новичков.</span>
@@ -520,7 +521,7 @@
                         <td class="growth-cell"><span class="growth-negative">-28.6%</span></td>
                     </tr>
                     <tr>
-                        <td class="rank-col">7 <span class="diff-pos">▲</span></td>
+                        <td class="rank-col">7 <span class="diff-pos">▲ +112</span></td>
                         <td class="event-cell">
                             <span class="event-name"><span class="event-flag">🇺🇸</span> SwingCouver</span>
                             <span class="event-comment">Формально канадский бренд, но фактически — крупный американский ивент возле Портленда, после переезда показал впечатляющий рост по новичкам.</span>
@@ -529,7 +530,7 @@
                         <td class="growth-cell"><span class="growth-positive">+127.3%</span></td>
                     </tr>
                     <tr>
-                        <td class="rank-col">8 <span class="diff-pos">▲</span></td>
+                        <td class="rank-col">8 <span class="diff-pos">▲ +109</span></td>
                         <td class="event-cell">
                             <span class="event-name"><span class="event-flag">🇷🇺</span> Swing & Snow</span>
                             <span class="event-comment">Второй российский ивент в мировом топе.</span>
@@ -538,7 +539,7 @@
                         <td class="growth-cell"><span class="growth-positive">+177.8%</span></td>
                     </tr>
                     <tr>
-                        <td class="rank-col">9 <span class="diff-pos">▲</span></td>
+                        <td class="rank-col">9 <span class="diff-pos">▲ +75</span></td>
                         <td class="event-cell">
                             <span class="event-name"><span class="event-flag">🇺🇸</span> Swing Over</span>
                             <span class="event-comment">Орландо становится новой точкой притяжения.</span>
@@ -547,7 +548,7 @@
                         <td class="growth-cell"><span class="growth-positive">+41.2%</span></td>
                     </tr>
                     <tr>
-                        <td class="rank-col">10</td>
+                        <td class="rank-col">10 <span class="diff-pos">▲ +46</span></td>
                         <td class="event-cell">
                             <span class="event-name"><span class="event-flag">🇭🇺</span> BudaFest</span>
                             <span class="event-comment">Лидер по поинтам показывает и отличную динамику по новичкам.</span>
@@ -616,7 +617,7 @@
                         <td class="growth-cell"><span class="growth-positive">+18.8%</span></td>
                     </tr>
                     <tr>
-                        <td class="rank-col">5 <span class="diff-pos">▲</span></td>
+                        <td class="rank-col">5 <span class="diff-pos">▲ +6</span></td>
                         <td class="event-cell">
                             <span class="event-name"><span class="event-flag">🇵🇱</span> Warsaw Halloween Swing</span>
                             <span class="event-comment">Продолжает подъем, закрепляя сильные позиции Польши в топе.</span>
@@ -625,7 +626,7 @@
                         <td class="growth-cell"><span class="growth-positive">+11.2%</span></td>
                     </tr>
                     <tr>
-                        <td class="rank-col">6 <span class="diff-pos">▲</span></td>
+                        <td class="rank-col">6 <span class="diff-pos">▲ +10</span></td>
                         <td class="event-cell">
                             <span class="event-name"><span class="event-flag">🇮🇹</span> Milan Modern Swing</span>
                             <span class="event-comment">Самый быстрый рост в десятке.</span>
@@ -634,7 +635,7 @@
                         <td class="growth-cell"><span class="growth-positive">+21.4%</span></td>
                     </tr>
                     <tr>
-                        <td class="rank-col">7 <span class="diff-pos">▲</span></td>
+                        <td class="rank-col">7 <span class="diff-pos">▲ +8</span></td>
                         <td class="event-cell">
                             <span class="event-name"><span class="event-flag">🇫🇷</span> Paris Westie Fest</span>
                             <span class="event-comment">Стал крупнейшим французским ивентом года, обойдя национальных конкурентов.</span>
@@ -643,7 +644,7 @@
                         <td class="growth-cell"><span class="growth-positive">+19.2%</span></td>
                     </tr>
                     <tr>
-                        <td class="rank-col">8 <span class="diff-neg">▼</span></td>
+                        <td class="rank-col">8 <span class="diff-neg">▼ -6</span></td>
                         <td class="event-cell">
                             <span class="event-name"><span class="event-flag">🇫🇷</span> West In Lyon</span>
                             <span class="event-comment">Стабильно держится рядом с топ-5, уступив парижскому коллеге всего 3 поинта.</span>
@@ -692,7 +693,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="rank-col top-3">🥇 <span class="diff-pos">▲</span></td>
+                        <td class="rank-col top-3">🥇 <span class="diff-pos">▲ +17</span></td>
                         <td class="event-cell">
                             <span class="event-name"><span class="event-flag">🇫🇷</span> West In Lyon</span>
                             <span class="event-comment">Главная точка входа для французских танцоров.</span>
@@ -701,7 +702,7 @@
                         <td class="growth-cell"><span class="growth-positive">+17.4%</span></td>
                     </tr>
                     <tr>
-                        <td class="rank-col top-3">🥈 <span class="diff-pos">▲</span></td>
+                        <td class="rank-col top-3">🥈 <span class="diff-pos">▲ +33</span></td>
                         <td class="event-cell">
                             <span class="event-name"><span class="event-flag">🇷🇺</span> St.Petersburg WCS Nights</span>
                             <span class="event-comment">Взрывной рост главного российского ивента.</span>
@@ -710,7 +711,7 @@
                         <td class="growth-cell"><span class="growth-positive">+125%</span></td>
                     </tr>
                     <tr>
-                        <td class="rank-col top-3">🥉 <span class="diff-pos">▲</span></td>
+                        <td class="rank-col top-3">🥉 <span class="diff-pos">▲ +37</span></td>
                         <td class="event-cell">
                             <span class="event-name"><span class="event-flag">🇷🇺</span> Swing & Snow</span>
                             <span class="event-comment">Еще один российский ивент с рекордным приростом новичков.</span>
@@ -719,7 +720,7 @@
                         <td class="growth-cell"><span class="growth-positive">+177.8%</span></td>
                     </tr>
                     <tr>
-                        <td class="rank-col">4 <span class="diff-pos">▲</span></td>
+                        <td class="rank-col">4 <span class="diff-pos">▲ +23</span></td>
                         <td class="event-cell">
                             <span class="event-name"><span class="event-flag">🇭🇺</span> BudaFest</span>
                             <span class="event-comment">Крупнейший ивент Европы продолжает привлекать новых танцоров.</span>
@@ -737,7 +738,7 @@
                         <td class="growth-cell"><span class="growth-positive">New</span></td>
                     </tr>
                     <tr>
-                        <td class="rank-col">6 <span class="diff-neg">▼</span></td>
+                        <td class="rank-col">6 <span class="diff-pos">▲ +7</span></td>
                         <td class="event-cell">
                             <span class="event-name"><span class="event-flag">🇩🇪</span> D-Townswing</span>
                             <span class="event-comment">Стабильно высокий приток новичков в Германии, даже несмотря на небольшое снижение метрики.</span>
@@ -746,7 +747,7 @@
                         <td class="growth-cell"><span class="growth-negative">-4.0%</span></td>
                     </tr>
                     <tr>
-                        <td class="rank-col">7</td>
+                        <td class="rank-col">7 <span class="diff-pos">▲ +4</span></td>
                         <td class="event-cell">
                             <span class="event-name"><span class="event-flag">🇧🇪</span> Swingside Invitational</span>
                             <span class="event-comment">Бельгийский ивент со стабильно высоким количеством новичков.</span>
@@ -755,7 +756,7 @@
                         <td class="growth-cell"><span class="growth-neutral">0%</span></td>
                     </tr>
                     <tr>
-                        <td class="rank-col">8 <span class="diff-pos">▲</span></td>
+                        <td class="rank-col">8 <span class="diff-pos">▲ +11</span></td>
                         <td class="event-cell">
                             <span class="event-name"><span class="event-flag">🇸🇪</span> Rock The Barn</span>
                             <span class="event-comment">Шведский летний фестиваль вырос почти на треть.</span>
@@ -773,7 +774,7 @@
                         <td class="growth-cell"><span class="growth-positive">New</span></td>
                     </tr>
                     <tr>
-                        <td class="rank-col">10</td>
+                        <td class="rank-col">10 <span class="diff-pos">▲ +18</span></td>
                         <td class="event-cell">
                             <span class="event-name"><span class="event-flag">🇦🇹</span> SwingVester</span>
                             <span class="event-comment">Австрия закрывает десятку.</span>

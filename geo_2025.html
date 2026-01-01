@@ -30,9 +30,9 @@
             background-color: #ffffff;
         }
         
-        /* Header - новый фон позже */
+        /* Header */
         .article-header {
-            background: #2d3748; /* Временно */
+            background: #2d3748; 
             color: white;
             padding: 100px 80px 80px;
             border-bottom: 1px solid #e5e5e5;
@@ -140,6 +140,10 @@
             line-height: 1.4;
             display: block;
         }
+        .diff-pos { color: #38a169; font-size: 11px; font-weight: 600; margin-left: 4px; }
+        .diff-neg { color: #e53e3e; font-size: 11px; font-weight: 600; margin-left: 4px; }
+        .diff-neutral { color: #a0aec0; font-size: 11px; margin-left: 4px; }
+
         .event-flag {
             margin-right: 6px;
             font-size: 16px;
@@ -153,13 +157,6 @@
             font-family: 'SF Mono', 'Roboto Mono', monospace;
             font-weight: 700;
             color: #2d3748;
-        }
-        .metric-sub {
-            display: block;
-            font-size: 11px;
-            color: #a0aec0;
-            font-weight: 400;
-            font-family: -apple-system, sans-serif;
         }
         
         .table-note {
@@ -202,7 +199,7 @@
 
     <article class="article-content">
         <div class="intro">
-            Если посмотреть на WSDC сезон 2025 года через призму географии, открывается интересная картина распределения танцевальной активности между континентами. Европа <strong>впервые обошла</strong> Северную Америку по притоку новых танцоров (1151 против 1017), хотя США по-прежнему генерируют основную массу спортивных результатов.
+            Если посмотреть на WSDC сезон 2025 года через призму географии, открывается интересная картина распределения танцевальной активности между континентами. Европа <strong>впервые обошла</strong> Северную Америку по притоку новых танцоров (1151 против 1017). Для сравнения: в 2024 году Америка лидировала с заметным отрывом (931 против 839).
         </div>
 
         <!-- Section 1: Global Map (Countries) -->
@@ -225,76 +222,79 @@
                     <tbody>
                         <tr>
                             <td class="rank-col top-3">1</td>
-                            <td class="event-cell"><span class="event-flag">🇺🇸</span> United States</td>
+                            <td class="event-cell"><span class="event-flag">🇺🇸</span> United States <span class="diff-neutral">=</span></td>
                             <td class="metric-cell" style="text-align: right">75</td>
                             <td class="metric-cell">26,352</td>
                             <td class="metric-cell">946</td>
                         </tr>
                         <tr>
                             <td class="rank-col top-3">2</td>
-                            <td class="event-cell"><span class="event-flag">🇫🇷</span> France</td>
+                            <td class="event-cell"><span class="event-flag">🇫🇷</span> France <span class="diff-neutral">=</span></td>
                             <td class="metric-cell" style="text-align: right">11</td>
                             <td class="metric-cell">4,280</td>
                             <td class="metric-cell">173</td>
                         </tr>
                         <tr>
                             <td class="rank-col top-3">3</td>
-                            <td class="event-cell"><span class="event-flag">🇩🇪</span> Germany</td>
+                            <td class="event-cell"><span class="event-flag">🇩🇪</span> Germany <span class="diff-neutral">=</span></td>
                             <td class="metric-cell" style="text-align: right">10</td>
                             <td class="metric-cell">3,843</td>
                             <td class="metric-cell">197</td>
                         </tr>
                         <tr>
                             <td class="rank-col">4</td>
-                            <td class="event-cell"><span class="event-flag">🇸🇪</span> Sweden</td>
+                            <td class="event-cell"><span class="event-flag">🇸🇪</span> Sweden <span class="diff-neutral">=</span></td>
                             <td class="metric-cell" style="text-align: right">7</td>
                             <td class="metric-cell">2,603</td>
                             <td class="metric-cell">127</td>
                         </tr>
                         <tr>
                             <td class="rank-col">5</td>
-                            <td class="event-cell"><span class="event-flag">🇵🇱</span> Poland</td>
+                            <td class="event-cell"><span class="event-flag">🇵🇱</span> Poland <span class="diff-pos">▲ +2</span></td>
                             <td class="metric-cell" style="text-align: right">5</td>
                             <td class="metric-cell">2,393</td>
                             <td class="metric-cell">128</td>
                         </tr>
                         <tr>
                             <td class="rank-col">6</td>
-                            <td class="event-cell"><span class="event-flag">🇬🇧</span> United Kingdom</td>
+                            <td class="event-cell"><span class="event-flag">🇬🇧</span> United Kingdom <span class="diff-neutral">=</span></td>
                             <td class="metric-cell" style="text-align: right">7</td>
                             <td class="metric-cell">2,012</td>
                             <td class="metric-cell">118</td>
                         </tr>
                         <tr>
                             <td class="rank-col">7</td>
-                            <td class="event-cell"><span class="event-flag">🇷🇺</span> Russia</td>
+                            <td class="event-cell"><span class="event-flag">🇷🇺</span> Russia <span class="diff-neg">▼ -2</span></td>
                             <td class="metric-cell" style="text-align: right">7</td>
                             <td class="metric-cell">2,037</td>
                             <td class="metric-cell">96</td>
                         </tr>
                         <tr>
                             <td class="rank-col">8</td>
-                            <td class="event-cell"><span class="event-flag">🇭🇺</span> Hungary</td>
+                            <td class="event-cell"><span class="event-flag">🇭🇺</span> Hungary <span class="diff-neutral">=</span></td>
                             <td class="metric-cell" style="text-align: right">4</td>
                             <td class="metric-cell">1,934</td>
                             <td class="metric-cell">82</td>
                         </tr>
                         <tr>
                             <td class="rank-col">9</td>
-                            <td class="event-cell"><span class="event-flag">🇨🇦</span> Canada</td>
+                            <td class="event-cell"><span class="event-flag">🇨🇦</span> Canada <span class="diff-neutral">=</span></td>
                             <td class="metric-cell" style="text-align: right">6</td>
                             <td class="metric-cell">1,359</td>
                             <td class="metric-cell">84</td>
                         </tr>
                         <tr>
                             <td class="rank-col">10</td>
-                            <td class="event-cell"><span class="event-flag">🇫🇮</span> Finland</td>
+                            <td class="event-cell"><span class="event-flag">🇫🇮</span> Finland <span class="diff-neutral">=</span></td>
                             <td class="metric-cell" style="text-align: right">3</td>
                             <td class="metric-cell">1,037</td>
                             <td class="metric-cell">66</td>
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div class="table-note">
+                <em>Примечание: Самый впечатляющий рост показала <strong>Польша</strong>, поднявшаяся с 7-го на 5-е место в мировом рейтинге (почти +1000 поинтов к прошлому году).</em>
             </div>
         </section>
 
@@ -304,7 +304,7 @@
         <section class="section">
             <h2 class="section-title">География США: Лидеры среди штатов</h2>
             <p>Внутри США выделяются два явных центра притяжения. <strong>Калифорния (CA)</strong> удерживает лидерство по "спортивной массе" (почти 5000 поинтов), являясь главным хабом для опытных танцоров.</p>
-            <p>В то же время <strong>Техас (TX)</strong> показывает высокую динамику развития: именно здесь в 2025 году появилось больше всего новых танцоров WSDC (144 против 115 в Калифорнии).</p>
+            <p>В то же время <strong>Техас (TX)</strong>, несмотря на небольшое снижение по сравнению с прошлым годом, сохраняет самую высокую динамику развития: именно здесь появилось больше всего новых танцоров WSDC (144 человека).</p>
 
             <div class="table-scroll">
                 <table class="rank-table">
@@ -320,21 +320,21 @@
                     <tbody>
                         <tr>
                             <td class="rank-col top-3">1</td>
-                            <td class="event-cell">California (CA) <span class="event-comment">Лидер по поинтам и участникам</span></td>
+                            <td class="event-cell">California (CA) <span class="event-comment">Лидер по поинтам</span></td>
                             <td class="metric-cell" style="text-align: right">11</td>
                             <td class="metric-cell">4,906</td>
                             <td class="metric-cell">115</td>
                         </tr>
                         <tr>
                             <td class="rank-col top-3">2</td>
-                            <td class="event-cell">Texas (TX) <span class="event-comment">Лидер по росту (New Dancers)</span></td>
+                            <td class="event-cell">Texas (TX) <span class="event-comment">Лидер по New Dancers</span></td>
                             <td class="metric-cell" style="text-align: right">8</td>
                             <td class="metric-cell">3,063</td>
                             <td class="metric-cell">144</td>
                         </tr>
                         <tr>
                             <td class="rank-col top-3">3</td>
-                            <td class="event-cell">Florida (FL) <span class="event-comment">Уверенное третье место</span></td>
+                            <td class="event-cell">Florida (FL) <span class="event-comment">Стабильное 3-е место</span></td>
                             <td class="metric-cell" style="text-align: right">7</td>
                             <td class="metric-cell">1,884</td>
                             <td class="metric-cell">91</td>
@@ -419,7 +419,7 @@
             <h2 class="section-title">Танцевальные столицы мира (Топ Городов)</h2>
             <p>Если убрать границы стран и посмотреть на конкретные города, карта мира меняется. В 2025 году у нас новый абсолютный лидер.</p>
             
-            <p><strong>Стокгольм</strong> стал мировой столицей свинга, заняв первое место и по сумме поинтов, и по количеству привлеченных новичков. Это результат кумулятивного эффекта: сразу 5 рейтинговых ивентов в одной локации создали мощнейшую экосистему.</p>
+            <p><strong>Стокгольм</strong> стал мировой столицей свинга, сместив с первого места <strong>Будапешт</strong> (лидера 2024 года). Шведская столица заняла первое место и по сумме поинтов, и по количеству привлеченных новичков.</p>
 
             <div class="table-scroll">
                 <table class="rank-table">
@@ -436,8 +436,8 @@
                         <tr>
                             <td class="rank-col top-3">🥇</td>
                             <td class="event-cell">
-                                <span class="event-name"><span class="event-flag">🇸🇪</span> Stockholm</span>
-                                <span class="event-comment">Абсолютный лидер года.</span>
+                                <span class="event-name"><span class="event-flag">🇸🇪</span> Stockholm <span class="diff-pos">▲ +1</span></span>
+                                <span class="event-comment">Новый абсолютный лидер года.</span>
                             </td>
                             <td class="metric-cell" style="text-align: right">5</td>
                             <td class="metric-cell">2,069</td>
@@ -446,7 +446,7 @@
                         <tr>
                             <td class="rank-col top-3">🥈</td>
                             <td class="event-cell">
-                                <span class="event-name"><span class="event-flag">🇭🇺</span> Budapest</span>
+                                <span class="event-name"><span class="event-flag">🇭🇺</span> Budapest <span class="diff-neg">▼ -1</span></span>
                                 <span class="event-comment">Главный европейский мега-хаб.</span>
                             </td>
                             <td class="metric-cell" style="text-align: right">4</td>
@@ -456,7 +456,7 @@
                         <tr>
                             <td class="rank-col top-3">🥉</td>
                             <td class="event-cell">
-                                <span class="event-name"><span class="event-flag">🇺🇸</span> San Francisco</span>
+                                <span class="event-name"><span class="event-flag">🇺🇸</span> San Francisco <span class="diff-neutral">=</span></span>
                                 <span class="event-comment">Столица американского свинга.</span>
                             </td>
                             <td class="metric-cell" style="text-align: right">2</td>
@@ -465,7 +465,7 @@
                         </tr>
                         <tr>
                             <td class="rank-col">4</td>
-                            <td class="event-cell"><span class="event-flag">🇺🇸</span> Orlando</td>
+                            <td class="event-cell"><span class="event-flag">🇺🇸</span> Orlando <span class="diff-pos">▲</span></td>
                             <td class="metric-cell" style="text-align: right">4</td>
                             <td class="metric-cell">1,136</td>
                             <td class="metric-cell">56</td>
@@ -493,7 +493,7 @@
                         </tr>
                         <tr>
                             <td class="rank-col">8</td>
-                            <td class="event-cell"><span class="event-flag">🇵🇱</span> Kraków</td>
+                            <td class="event-cell"><span class="event-flag">🇵🇱</span> Kraków <span class="diff-pos">▲</span></td>
                             <td class="metric-cell" style="text-align: right">2</td>
                             <td class="metric-cell">1,025</td>
                             <td class="metric-cell">59</td>
